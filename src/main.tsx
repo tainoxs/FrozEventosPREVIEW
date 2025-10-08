@@ -6,8 +6,8 @@ import './index.css';
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    {/* Use basename to support GitHub Pages subpath */}
-    <BrowserRouter basename={import.meta.env.BASE_URL}>
+    {/* Use basename to support GitHub Pages subpath (no trailing slash) */}
+    <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, '')}>
       <App />
     </BrowserRouter>
   </StrictMode>
