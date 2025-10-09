@@ -4,12 +4,13 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Redirecionando…</title>
-    <!-- Redireciona para a raiz relativa do site no GitHub Pages -->
-    <meta http-equiv="refresh" content="0; url=./" />
+    <meta http-equiv="refresh" content="0; url=/FrozEventosPREVIEW/" />
     <script>
-      // Fallback simples para SPAs no GitHub Pages: manda para a raiz do repositório
+      // Fallback para GitHub Pages em rotas SPA
       (function () {
-        location.replace('./');
+        var repo = '/FrozEventosPREVIEW';
+        // Redireciona para a raiz do preview para evitar tela branca
+        location.replace(repo + '/');
       })();
     </script>
     <style>
